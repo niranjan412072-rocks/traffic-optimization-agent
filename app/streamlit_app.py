@@ -20,8 +20,28 @@ from src.anomaly import add_ratios, detect
 from src.vision import VehicleCounter
 from src import routing
 import joblib
+import subprocess
+
+
+@st.cache_resource
+def ensure_models():
+    try:
+        for p in (ROOT / "models").glob("*.joblib"):
+            joblib.load(p)
+        return "loaded"
+    except Exception:
+        steps = [
+            ["-m", "src.data_generator", "--days", "180"],
+            ["-m", "src.forecasting", "--horizons", "1", "2", "4"],
+            ["-m", "src.anomaly"],
+        ]
+        for step in steps:
+            subprocess.run([sys.executable, *step], cwd=ROOT, check=True)
+        return "retrained"
 
 st.set_page_config(page_title="AI Traffic Optimization Agent", layout="wide")
+with st.spinner("Preparing models (first load can take a minute)..."):
+    ensure_models()
 st.title("AI Traffic Optimization Agent")
 st.caption("SDG 11 - Sustainable Cities | forecasting + computer vision + reinforcement learning")
 
