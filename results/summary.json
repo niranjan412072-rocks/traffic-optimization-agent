@@ -1,0 +1,259 @@
+{
+  "signal_control": [
+    {
+      "scenario": "normal",
+      "policy": "Fixed-time (30s)",
+      "avg_delay_s": 20.909,
+      "avg_queue": 6.982,
+      "throughput_ratio": 0.989,
+      "vehicles_per_hour": 1200.7,
+      "overflow": 0.0,
+      "switches": 51.0
+    },
+    {
+      "scenario": "normal",
+      "policy": "Actuated rule-based",
+      "avg_delay_s": 13.913,
+      "avg_queue": 4.656,
+      "throughput_ratio": 0.992,
+      "vehicles_per_hour": 1200.7,
+      "overflow": 0.0,
+      "switches": 82.55
+    },
+    {
+      "scenario": "normal",
+      "policy": "RL agent (Q-learning)",
+      "avg_delay_s": 14.35,
+      "avg_queue": 4.804,
+      "throughput_ratio": 0.991,
+      "vehicles_per_hour": 1200.7,
+      "overflow": 0.0,
+      "switches": 77.6
+    },
+    {
+      "scenario": "rush",
+      "policy": "Fixed-time (30s)",
+      "avg_delay_s": 32.731,
+      "avg_queue": 19.029,
+      "throughput_ratio": 0.979,
+      "vehicles_per_hour": 2073.9,
+      "overflow": 0.0,
+      "switches": 51.0
+    },
+    {
+      "scenario": "rush",
+      "policy": "Actuated rule-based",
+      "avg_delay_s": 47.523,
+      "avg_queue": 28.069,
+      "throughput_ratio": 0.956,
+      "vehicles_per_hour": 2073.9,
+      "overflow": 0.0,
+      "switches": 88.2
+    },
+    {
+      "scenario": "rush",
+      "policy": "RL agent (Q-learning)",
+      "avg_delay_s": 31.023,
+      "avg_queue": 18.088,
+      "throughput_ratio": 0.98,
+      "vehicles_per_hour": 2073.9,
+      "overflow": 0.0,
+      "switches": 62.5
+    },
+    {
+      "scenario": "imbalanced",
+      "policy": "Fixed-time (30s)",
+      "avg_delay_s": 85.333,
+      "avg_queue": 42.573,
+      "throughput_ratio": 0.916,
+      "vehicles_per_hour": 1763.1,
+      "overflow": 3.95,
+      "switches": 51.0
+    },
+    {
+      "scenario": "imbalanced",
+      "policy": "Actuated rule-based",
+      "avg_delay_s": 17.237,
+      "avg_queue": 8.498,
+      "throughput_ratio": 0.992,
+      "vehicles_per_hour": 1763.1,
+      "overflow": 0.0,
+      "switches": 64.35
+    },
+    {
+      "scenario": "imbalanced",
+      "policy": "RL agent (Q-learning)",
+      "avg_delay_s": 17.904,
+      "avg_queue": 8.809,
+      "throughput_ratio": 0.992,
+      "vehicles_per_hour": 1763.1,
+      "overflow": 0.0,
+      "switches": 53.1
+    },
+    {
+      "scenario": "shifting",
+      "policy": "Fixed-time (30s)",
+      "avg_delay_s": 53.808,
+      "avg_queue": 25.794,
+      "throughput_ratio": 0.953,
+      "vehicles_per_hour": 1699.4,
+      "overflow": 0.0,
+      "switches": 51.0
+    },
+    {
+      "scenario": "shifting",
+      "policy": "Actuated rule-based",
+      "avg_delay_s": 16.771,
+      "avg_queue": 7.958,
+      "throughput_ratio": 0.992,
+      "vehicles_per_hour": 1699.4,
+      "overflow": 0.0,
+      "switches": 66.1
+    },
+    {
+      "scenario": "shifting",
+      "policy": "RL agent (Q-learning)",
+      "avg_delay_s": 17.523,
+      "avg_queue": 8.312,
+      "throughput_ratio": 0.991,
+      "vehicles_per_hour": 1699.4,
+      "overflow": 0.0,
+      "switches": 54.45
+    }
+  ],
+  "impact_estimate": {
+    "normal": {
+      "delay_reduction_%": 31.369129613703908,
+      "vehicle_hours_saved_per_hour": 2.187568363983931,
+      "fuel_saved_L_per_hour": 1.750054691187145,
+      "co2_saved_kg_per_hour": 4.042626336642305
+    },
+    "rush": {
+      "delay_reduction_%": 5.217675920303381,
+      "vehicle_hours_saved_per_hour": 0.9838327558921651,
+      "fuel_saved_L_per_hour": 0.7870662047137321,
+      "co2_saved_kg_per_hour": 1.8181229328887212
+    },
+    "imbalanced": {
+      "delay_reduction_%": 79.01863804304558,
+      "vehicle_hours_saved_per_hour": 33.023465697175325,
+      "fuel_saved_L_per_hour": 26.41877255774026,
+      "co2_saved_kg_per_hour": 61.027364608380005
+    },
+    "shifting": {
+      "delay_reduction_%": 67.43438649629037,
+      "vehicle_hours_saved_per_hour": 17.128523874403598,
+      "fuel_saved_L_per_hour": 13.702819099522879,
+      "co2_saved_kg_per_hour": 31.65351211989785
+    },
+    "rl_policy": "RL agent (Q-learning)"
+  },
+  "forecast_metrics": {
+    "h1": {
+      "horizon_steps": 1,
+      "horizon_min": 15,
+      "model_name": "hgb",
+      "n_train": 13286,
+      "n_test": 3322,
+      "model": {
+        "MAE": 24.990693815773152,
+        "RMSE": 36.87571773617731,
+        "MAPE_%": 6.034549322796455,
+        "R2": 0.976190385377099
+      },
+      "baseline_persistence": {
+        "MAE": 37.67700180614088,
+        "RMSE": 54.256129365729294,
+        "MAPE_%": 8.80004071122164,
+        "R2": 0.9484570800680009
+      },
+      "baseline_same_time_yesterday": {
+        "MAE": 80.94190246839254,
+        "RMSE": 141.29788325435504,
+        "MAPE_%": 19.244797150414417,
+        "R2": 0.6504231105196778
+      },
+      "MAE_improvement_vs_persistence_%": 33.671224838012506
+    },
+    "h2": {
+      "horizon_steps": 2,
+      "horizon_min": 30,
+      "model_name": "hgb",
+      "n_train": 13286,
+      "n_test": 3322,
+      "model": {
+        "MAE": 26.158866793178678,
+        "RMSE": 40.36803567377301,
+        "MAPE_%": 6.406305661213955,
+        "R2": 0.971467052588983
+      },
+      "baseline_persistence": {
+        "MAE": 52.390728476821195,
+        "RMSE": 74.63752262276056,
+        "MAPE_%": 12.180388466679453,
+        "R2": 0.9024593077058148
+      },
+      "baseline_same_time_yesterday": {
+        "MAE": 80.94190246839254,
+        "RMSE": 141.29788325435504,
+        "MAPE_%": 19.244797150414417,
+        "R2": 0.6504231105196778
+      },
+      "MAE_improvement_vs_persistence_%": 50.06966393919884
+    },
+    "h4": {
+      "horizon_steps": 4,
+      "horizon_min": 60,
+      "model_name": "hgb",
+      "n_train": 13286,
+      "n_test": 3322,
+      "model": {
+        "MAE": 26.89982922489239,
+        "RMSE": 42.09456483297702,
+        "MAPE_%": 6.6961459727550325,
+        "R2": 0.9689741670061368
+      },
+      "baseline_persistence": {
+        "MAE": 88.50511739915713,
+        "RMSE": 122.13967636211528,
+        "MAPE_%": 20.512336923189423,
+        "R2": 0.7387929275038296
+      },
+      "baseline_same_time_yesterday": {
+        "MAE": 80.94190246839254,
+        "RMSE": 141.29788325435504,
+        "MAPE_%": 19.244797150414417,
+        "R2": 0.6504231105196778
+      },
+      "MAE_improvement_vs_persistence_%": 69.60647020716955
+    }
+  },
+  "anomaly_metrics": {
+    "precision": 0.653179190751445,
+    "recall": 0.8968253968253969,
+    "f1": 0.7558528428093646,
+    "incident_events": 30,
+    "incident_events_detected": 30,
+    "event_detection_rate": 1.0
+  },
+  "routing_metrics": {
+    "pairs": 300,
+    "mean_time_saved_%": 21.24580044041623,
+    "median_time_saved_%": 16.97785031547903,
+    "max_time_saved_%": 64.88702714623747,
+    "mean_time_distance_route_min": 9.701609221383606,
+    "mean_time_ai_route_min": 6.531155539931155
+  },
+  "clustering_summary": {
+    "daily_pattern_clusters": {
+      "weekday rush-hour": 124,
+      "weekend-like": 50,
+      "low-volume / holiday-like": 6
+    },
+    "hotspot_tiers": {
+      "Tier 3 (low)": 28,
+      "Tier 2 (medium)": 8,
+      "Tier 1 (critical)": 4
+    }
+  }
+}

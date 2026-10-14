@@ -1,0 +1,12 @@
+{
+  "daily_pattern_clusters": {
+    "weekday rush-hour": 124,
+    "weekend-like": 50,
+    "low-volume / holiday-like": 6
+  },
+  "hotspot_tiers": {
+    "Tier 3 (low)": 28,
+    "Tier 2 (medium)": 8,
+    "Tier 1 (critical)": 4
+  }
+}

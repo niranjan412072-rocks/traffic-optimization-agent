@@ -1,0 +1,8 @@
+# Optional upgrades (the project runs fine without them)
+xgboost>=2.0              # alternative forecasting model
+gymnasium>=0.29           # gym-style env for Stable-Baselines3
+stable-baselines3>=2.3    # PPO / DQN signal-control agents (installs PyTorch)
+ultralytics>=8.2          # YOLOv8 vehicle detection (installs PyTorch)
+ibm-watsonx-ai>=1.1       # IBM watsonx.ai (Granite) natural-language explanations
+# For a smaller CPU-only PyTorch install first run:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu

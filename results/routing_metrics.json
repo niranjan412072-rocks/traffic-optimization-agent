@@ -1,0 +1,8 @@
+{
+  "pairs": 300,
+  "mean_time_saved_%": 21.24580044041623,
+  "median_time_saved_%": 16.97785031547903,
+  "max_time_saved_%": 64.88702714623747,
+  "mean_time_distance_route_min": 9.701609221383606,
+  "mean_time_ai_route_min": 6.531155539931155
+}

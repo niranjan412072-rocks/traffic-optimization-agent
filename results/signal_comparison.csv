@@ -1,0 +1,13 @@
+scenario,policy,avg_delay_s,avg_queue,throughput_ratio,vehicles_per_hour,overflow,switches
+normal,Fixed-time (30s),20.909,6.982,0.989,1200.7,0.0,51.0
+normal,Actuated rule-based,13.913,4.656,0.992,1200.7,0.0,82.55
+normal,RL agent (Q-learning),14.35,4.804,0.991,1200.7,0.0,77.6
+rush,Fixed-time (30s),32.731,19.029,0.979,2073.9,0.0,51.0
+rush,Actuated rule-based,47.523,28.069,0.956,2073.9,0.0,88.2
+rush,RL agent (Q-learning),31.023,18.088,0.98,2073.9,0.0,62.5
+imbalanced,Fixed-time (30s),85.333,42.573,0.916,1763.1,3.95,51.0
+imbalanced,Actuated rule-based,17.237,8.498,0.992,1763.1,0.0,64.35
+imbalanced,RL agent (Q-learning),17.904,8.809,0.992,1763.1,0.0,53.1
+shifting,Fixed-time (30s),53.808,25.794,0.953,1699.4,0.0,51.0
+shifting,Actuated rule-based,16.771,7.958,0.992,1699.4,0.0,66.1
+shifting,RL agent (Q-learning),17.523,8.312,0.991,1699.4,0.0,54.45

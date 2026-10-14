@@ -1,0 +1,8 @@
+{
+  "precision": 0.653179190751445,
+  "recall": 0.8968253968253969,
+  "f1": 0.7558528428093646,
+  "incident_events": 30,
+  "incident_events_detected": 30,
+  "event_detection_rate": 1.0
+}
